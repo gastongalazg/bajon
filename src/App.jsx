@@ -5,9 +5,9 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 // ---------------------------------------------------------------------------
 
 const DIRECTIONS = [
-  { id: "izq", label: "Dobla a la izquierda y avanza una cuadra.", arrow: "⬅", short: "Izquierda" },
-  { id: "der", label: "Dobla a la derecha y avanza una cuadra.", arrow: "➡", short: "Derecha" },
-  { id: "rec", label: "Continúa recto una cuadra.", arrow: "⬆", short: "Recto" },
+  { id: "izq", label: "Dobla a la izquierda y avanza una cuadra.", arrow: "⬅️", short: "Izquierda" },
+  { id: "der", label: "Dobla a la derecha y avanza una cuadra.", arrow: "➡️", short: "Derecha" },
+  { id: "rec", label: "Continúa recto una cuadra.", arrow: "⬆️", short: "Recto" },
 ];
 
 const CHALLENGES = [
@@ -873,6 +873,11 @@ export default function App() {
           <div className="stamp-arrow">
             {rollFace ? rollFace.arrow : DICE_SKINS[game.diceSkin || "default"].icon}
           </div>
+          {(game.diceSkin || "default") !== "default" && (
+            <div className="stamp-skin-badge">
+              {DICE_SKINS[game.diceSkin].icon}
+            </div>
+          )}
         </div>
         <p className="stamp-caption">
           {rolling
@@ -1399,6 +1404,7 @@ const STYLES = `
   margin-top: 6px;
 }
 .stamp {
+  position: relative;
   width: 150px; height: 150px;
   border-radius: 50%;
   background: var(--orange);
@@ -1422,6 +1428,19 @@ const STYLES = `
   100% { transform: rotate(-4deg) scale(1); }
 }
 .stamp-arrow { color: var(--ink); }
+.stamp-skin-badge {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  transform: rotate(8deg);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
 
 .stamp-caption {
   font-size: 16px;
@@ -1486,8 +1505,8 @@ const STYLES = `
 }
 .secondary-btn {
   background: transparent;
-  color: var(--paper);
-  border-color: rgba(242,232,213,0.4);
+  color: var(--ink);
+  border-color: rgba(26,20,16,0.4);
 }
 
 /* ---------- Overlay & popups ---------- */

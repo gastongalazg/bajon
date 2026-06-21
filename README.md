@@ -23,3 +23,19 @@ Un juego de aventura callejera para encontrar comida. Lanza el dado del destino,
 ## Stack
 
 React (single-file component) · Web Audio API · sin dependencias externas de UI
+
+## Origen
+
+Encontrando el Bajón nació una tarde cualquiera junto a mi hijo, cuando nos encontramos con una pregunta tan simple como difícil de responder:
+
+"¿Qué comemos hoy?"
+
+Después de varios minutos sin ponernos de acuerdo sobre qué comer ni dónde ir, decidimos dejar la decisión en manos del azar.
+
+La idea comenzó como un juego: caminar por el barrio siguiendo instrucciones aleatorias, doblando a la izquierda, a la derecha o siguiendo recto, hasta que el destino nos llevara a algún lugar para encontrar algo rico para comer.
+
+En el camino descubrimos que la parte más entretenida no era elegir el lugar, sino la aventura de recorrer calles, observar el entorno, encontrar cosas curiosas y compartir tiempo juntos.
+
+Así nació Encontrando el Bajón, una aplicación que transforma una decisión cotidiana en una pequeña aventura urbana, donde el recorrido es tan importante como el destino.
+
+Porque a veces la mejor forma de decidir qué comer... es dejar que el azar elija por nosotros.
